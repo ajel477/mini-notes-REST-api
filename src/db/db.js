@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
+require('dotenv').config();
 
 function connectDB() {
 
-    mongoose.connect("mongodb+srv://ajelmathew04_db_user:YT1bEGs1yJ26kEK0@cluster47.u6pdi94.mongodb.net/backendDB")
+    mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
-        console.log("MongoDB connected")
+        console.log("MongoDB connected");
     })
 
 }
